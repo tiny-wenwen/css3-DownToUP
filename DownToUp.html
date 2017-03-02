@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>由下到上的动画</title>
+	<style>
+	*{margin:0; padding: 0;}
+	html,body{height: 100%;}
+		.body{width: 500px; height: 300px; background-color: #ddd; position: relative;}
+		.line{background-color: #000; width: 20px; height: 0; animation: line 0.3s linear forwards; position:absolute; bottom:0px; transform:translate(0,180px); }
+		@keyframes line{0%{ transform:rotate(0.001deg);  height: 10px;} 100%{transform:rotate(0.001deg);  height: 100px;}}
+	</style>
+</head>
+<body>
+	<div class="body"><div class="line"></div></div>
+</body>
+</html>
